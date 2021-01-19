@@ -1,0 +1,154 @@
+/**
+ * Created by tangyue on 20/12/24
+ */
+@import "../common/variables";
+@import "../mixins/mixins";
+@include b(form) {
+	// 蓝色样式的
+	@include m(primary){
+		.el-form-item__label{
+			background: $CUS_FORM_LABEL_BACKGROUND_COLOR;
+			color: $CUS_FORM_LABEL_FONT_COLOR;
+			border: 1px solid $CUS_FORM_LABEL_BORDER_COLOR;
+		}
+		.el-input__inner{
+			border:1px solid $CUS_FORM_CONTENT_BORDER_COLOR;
+
+		}
+	}
+	// 有边线的
+	@include m(bodeped){
+
+	}
+	//
+	@include m(rounded){
+		.pp-form-item{
+			.el-form-item__label{
+				border-top-left-radius: 4px;
+				border-bottom-left-radius: 4px;
+			}
+			.el-input__inner{
+				border-top-left-radius: 0;
+				border-bottom-left-radius: 0;
+			}
+		}
+	}//
+	@include m(sharp){
+		.pp-form-item{
+			.el-form-item__label{
+				//border-top-left-radius: 4px;
+				//border-bottom-left-radius: 4px;
+			}
+			.el-input__inner{
+				border-radius: 0;
+			}
+		}
+	}
+	// 紧凑型
+	@include m(compacted) {
+		.pp-form-group{
+			box-shadow: none;
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
+		.pp-form-item{
+			// 控制宽度的样式
+			&[class*=col-]{
+				float: left;
+				padding-left: 0;
+				padding-right: 0;
+			}
+			.el-form-item{
+				margin-bottom: 0px;
+			}
+		}
+	}
+	.el-form-item__error{
+		position: static;
+		padding-top: 1px;
+		margin-bottom: -4px;
+	}
+}
+// 单个表单项
+@include b(form-item) {
+	.el-form-item__label,
+	.el-input__inner{
+		font-size: 12px;
+		line-height: $CUS_FORM_INPUT_HEIGHT;
+	}
+	.el-radio__label{
+		font-size: 12px;
+	}
+	.el-input__icon{
+		line-height: $CUS_FORM_INPUT_HEIGHT;
+	}
+	.el-form-item__label{
+		height: $CUS_FORM_INPUT_HEIGHT;
+	}
+	.el-input__inner{
+		height: $CUS_FORM_INPUT_HEIGHT;
+	}
+	.el-form-item__content{
+		line-height: normal; // $CUS_FORM_INPUT_HEIGHT;
+	}
+	.el-form-item{
+		margin-bottom: 6px;
+	}
+
+	// 控制宽度的样式
+	&[class*=col-]{
+		float: left;
+		padding-left: 17.5px;
+		padding-right: 17.5px;
+	}
+	@for $i from 0 through 24 {
+		&.col-#{$i} {
+			width: (1 / 24 * $i * 100) * 1%;
+		}
+	}
+
+	// 多行文本框
+	@include e(textarea-box){
+		.el-form-item__label{
+			height: 76px;
+			line-height: 76px;
+		}
+		.el-textarea__inner{
+			resize: none;
+			height: 76px;
+			border:1px solid $CUS_FORM_CONTENT_BORDER_COLOR;
+		}
+	}
+	.el-select{
+		width: 100%;
+	}
+	.el-date-editor.el-input{
+		width: 100%;
+	}
+	.el-radio-group{
+		border: 1px solid $CUS_FORM_CONTENT_BORDER_COLOR;
+		width: 100%;
+		height: $CUS_FORM_INPUT_HEIGHT;
+		float:left;
+		padding-left: 10px;
+		.el-radio{
+			line-height: $CUS_FORM_INPUT_HEIGHT;
+		}
+	}
+}
+// form内的小分组的样式
+@include b(form-group) {
+	box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+	background: #fff;
+	margin: 0 0 10px;
+	padding: 10px;
+	&:after{
+		display: block;
+		content: '';
+		clear: both;
+	}
+	@include e(row){
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+}

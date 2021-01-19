@@ -1,0 +1,84 @@
+/**
+ * Created by tangyue on 20/12/30
+ */
+@import "../common/variables";
+@import "../mixins/mixins";
+@include b(msgbox-box) {
+	width: 320px;
+	border: 1px solid $CUS_MSGBOX_BORDER_COLOR;
+	border-radius: 0;
+	box-shadow: 0px 6px 10px 0px $CUS_MSGBOX_BOX_SHADOW_COLOR;
+	.el-message-box__content{
+	}
+	.el-message-box__status{
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		left: 50%;
+		top: 20px;
+		margin-left: -25px;
+		.circle{
+			position: relative;
+			top: 50%;
+			left: 50%;
+			width: 34px;
+			height: 34px;
+			margin-top: -18px;
+			margin-left: -18px;
+			line-height: 36px;
+			background: #fff;
+			border-radius: 50%;
+		}
+		&+.el-message-box__message{
+			padding-left: 12px;
+			padding-right: 12px;
+		}
+	}
+	.el-message-box__message{
+		padding-top: 56px;
+		p{
+			text-align: center;
+			font-size: 14px;
+			color: #000;
+		}
+	}
+	.el-message-box__btns {
+		text-align: center;
+		border-top: 1px solid #ddd;
+		margin-top: 20px;
+		padding-top: 10px;
+	}
+	.is-success{
+		background: $CUS_MSGBOX_SUCCESS_COLOR;
+		.iconfont{
+			font-size: $CUS_MSGBOX_ICON_FONT_SIZE;
+			color: $CUS_MSGBOX_SUCCESS_FONT_COLOR;
+		}
+	}
+	.is-inquiry{
+		background: $CUS_MSGBOX_inquiry_COLOR;
+		.iconfont{
+			font-size: $CUS_MSGBOX_ICON_FONT_SIZE;
+			color: $CUS_MSGBOX_inquiry_FONT_COLOR;
+		}
+	}
+	.is-warning{
+		background: $CUS_MSGBOX_warning_COLOR;
+		.iconfont{
+			font-size: $CUS_MSGBOX_ICON_FONT_SIZE;
+			color: $CUS_MSGBOX_warning_FONT_COLOR;
+		}
+		&+.el-message-box__message{
+			p{
+				font-size: 18px;
+			}
+		}
+	}
+	@include e(sub-message){
+		display: block;
+		font-size: 14px;
+		color: #666;
+		margin-top: 10px;
+		text-align: center;
+	}
+}

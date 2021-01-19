@@ -1,0 +1,60 @@
+@import "config";
+
+// 基础组件用
+@mixin b($block){
+	$B: $namespace + '-' + $block !global;
+	$currentSelector: "";
+
+	.#{$B}{
+		@content;
+	}
+}
+// 组合组件用
+@mixin widgetB($block){
+	$B: $widgetnamespace + '-' + $block !global;
+	$currentSelector: "";
+
+	.#{$B}{
+		@content;
+	}
+}
+
+@mixin e($ele){
+	$E: $ele !global;
+	$selector: &;
+	$currentSelector: "";
+	@each $unit in $ele {
+		$currentSelector: #{$currentSelector + "." + $B + $element-separator + $unit + ","};
+	}
+
+	//@if hitAllSpecialNestRule($selector) {
+	//	@at-root {
+	//		#{$selector} {
+	//			#{$currentSelector} {
+	//				@content;
+	//			}
+	//		}
+	//	}
+	//} @else{
+		@at-root {
+			#{$currentSelector} {
+				@content;
+			}
+		}
+	//}
+
+}
+
+@mixin m($modifier) {
+	$selector: &;
+	$currentSelector: "";
+	@each $unit in $modifier {
+		$currentSelector: #{$currentSelector + & + $modifier-separator + $unit + ","};
+	}
+
+	@at-root {
+		#{$currentSelector} {
+			@content;
+		}
+	}
+}

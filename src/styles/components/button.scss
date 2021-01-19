@@ -1,0 +1,57 @@
+/**
+ * Created by tangyue on 20/12/28
+ */
+@import "../common/variables";
+@import "../mixins/mixins";
+@include b(button) {
+	font-size: 12px;
+	padding: 6px 17.5px;
+	border-radius: 13px;
+	cursor: pointer;
+	outline: none;
+	line-height: 1;
+	// 灰色样式的
+	@include m(def){
+
+	}
+	// 蓝色样式的
+	@include m(primary){
+		color: $CUS_BUTTON_FONT_COLOR_PRIMARY;
+		background: #fff;
+		border: none;
+		// 有边线的
+		&.is-bordered{
+			border:1px solid $CUS_BUTTON_FONT_COLOR_PRIMARY;
+		}
+		&:hover
+		/*&:focus*/{
+			color: red;
+			border-color: red;
+		}
+	}
+	// 填充形蓝色样式的
+	@include m(fill-primary){
+		color: #fff;
+		background: $CUS_BUTTON_FONT_COLOR_PRIMARY2;
+		border: none;
+		// 有边线的
+		&.is-bordered{
+			border:1px solid $CUS_BUTTON_FONT_COLOR_PRIMARY2;
+		}
+		&:hover{
+			background: #51BEFF;
+		}
+	}
+
+	// サイズ設定
+	@include m(medium){
+		border-radius: 15px;
+		font-size: 14px;
+		font-weight: bold;
+		padding: 6px 25px;
+		&.pp-button--primary{
+		}
+		&.pp-button--fill-primary{
+		}
+	}
+}

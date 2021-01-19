@@ -1,0 +1,92 @@
+/**
+ * Created by tangyue on 20/12/21
+ */
+$baseFontSize: 12px;
+$hundredPercent:100%;
+// 公共配置颜色 --start--
+$FONT_COLOR_NORMAL: #FFF;
+$FONT_SIZE_SMALL: 1rem;
+
+// 公共配置颜色 --end--
+
+$bg-blue: #6289D1; /* 页脚的背景色 */
+$bg-blue-icon: #4EBEFF; /* 客服小图标背景色 */
+
+$color-blue-active: #68A4F6; /* 文字选中颜色 */
+$color-red: #FF4C34;/* 红色文字 */
+
+$bg-header: #F9FBFF; /* 板块头部背景色 */
+
+/* 四个点缀色 */
+$color-orange: #FF911B;
+$color-violet-blue: #9177F4;
+$color-violet: #BD75F2;
+$color-pink: #EB89A2;
+
+// 头部相关样式 --start--
+$HEADER_HEIGHT: 47px;
+$HEADER_MENU_HEIGHT: 36px;
+// 头部相关样式 --end--
+
+$FOOTER_HEIGHT: 26px;
+
+// cus-form组件的样式--start--
+$CUS_FORM_LABEL_BORDER_COLOR: rgb(196, 226, 254);
+$CUS_FORM_CONTENT_BORDER_COLOR: rgb(192, 210, 241);
+$CUS_FORM_LABEL_BACKGROUND_COLOR: #e4f5ff;
+$CUS_FORM_LABEL_FONT_COLOR: rgb(113, 141, 196);
+$CUS_FORM_INPUT_HEIGHT: 30px;
+// cus-form组件的样式--end--
+
+// cus-button相关的样式--start--
+$CUS_BUTTON_FONT_COLOR_PRIMARY: #175EFF;
+$CUS_BUTTON_FONT_COLOR_PRIMARY2: #5181FF;
+// cus-button相关的样式--end--
+$TOOLBOX_BUTTONS_HEIGHT: 46px;
+
+//table
+$tableThBg:#fff;//表头背景色
+$tableThText:#000;//表头文字颜色
+$tableTdStripBg:#F4F7F9;//表格斑马格背景色
+$tableTdHoverBg:#DAF1FF;//表格悬浮整行背景色
+$tableTdText:#666666;//表格单元格文字颜色
+$tableBorder: #EAECF0; // 表格边框颜色
+
+//pagination
+$pageText:#999999;//分页颜色
+$pageAcitveBg:#175EFF;;//分页选中的颜色
+$pageBg:#fff;//背景色
+
+// 消息提示弹窗相关样式--start--
+$CUS_MSGBOX_LABEL_BORDER_COLOR: rgb(196, 226, 254);
+$CUS_MSGBOX_BORDER_COLOR: #A1D2FF;
+$CUS_MSGBOX_BOX_SHADOW_COLOR: #C0D8FF;
+$CUS_MSGBOX_SUCCESS_COLOR: #DAFFCB;
+$CUS_MSGBOX_SUCCESS_FONT_COLOR: #00D42D;
+$CUS_MSGBOX_inquiry_COLOR: #FFEDD1;
+$CUS_MSGBOX_inquiry_FONT_COLOR: #FF9102;
+$CUS_MSGBOX_warning_COLOR: #FFEDD1;
+$CUS_MSGBOX_warning_FONT_COLOR: #FF9102;
+$CUS_MSGBOX_ICON_FONT_SIZE: 36px;
+// 消息提示弹窗相关样式--end--
+
+
+// 系统设置公共颜色部分--start--
+$commonColor:#239ce9;
+$commonBlackColor:#000;
+$commonAddIcon:#0DBC15;
+$commonBlueIcon:#409EFF;
+$commonDelIcon:#f00;
+$commonWhiteIcon:#bbb;
+$curentLocation:#666;
+$tableBorder:#e1e1e1;
+$tableBackgroundColor:#f2f2f2;
+$tableThColor:#333;
+$commonWhite:#fff;
+$buttonHoverColor:#259fdd;
+$commonRed:red;
+$dialogHeaderColor:#80B0F9;
+$dialogFooterColor:#eee;
+$dialogFooterBorder:#ddd;
+$commonBtnColor:#5181FF;
+// 系统设置公共颜色部分--end--

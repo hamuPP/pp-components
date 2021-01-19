@@ -1,0 +1,59 @@
+/*
+ * @Author: zhehao zhang
+ * @Date: 2021-01-04 14:37:42
+ * @LastEditors: zhehao zhang
+ * @LastEditTime: 2021-01-12 15:13:38
+ * @Description: tab栏贴合cardTitle的版本 !!注意，不能直接引入样式文件
+ *              在需要的地方将一下代码复制到页面样式内即可，直接引用会影响到其他页面的tab栏样式
+ */
+
+.el-tabs {
+  // border: 1px solid red;
+  position: absolute;
+  width: 100%;
+  top: 0px;
+
+  .el-tabs__header {
+    border: 1px solid red;
+    margin: 0px;
+
+    .el-tabs__nav-wrap {
+      .el-tabs__nav-scroll {
+        .el-tabs__nav {
+          margin-left: 160px;
+          display: flex;
+          align-items: center;
+
+          // item为每个tab标签
+          .el-tabs__item {
+            font-size: 14px;
+            height: 16px;
+            line-height: 16px;
+            margin-top: calc((38px - 16px)/2);
+
+            &:not(:last-child) {
+              border-right: 1.5px solid #CCCCCC;
+            }
+          }
+
+          // active-bar为激活tab的下划线
+          .el-tabs__active-bar {
+            height: 0px // 若后续想恢复下划线样式，则注释掉高度为0即可
+          }
+        }
+      }
+
+      &::after {
+        height: 0px;
+        // 若后续想恢复下划线样式，则注释掉高度为0即可
+      }
+    }
+  }
+
+  .el-tabs__content {
+    position: absolute;
+    width: 100%;
+    top: 38px;
+    overflow: visible;
+  }
+}
